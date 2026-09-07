@@ -1,0 +1,211 @@
+/* ==========================================================
+   COLOR PALETTE
+   Coral (primary accent, buttons, hovers) : #FF5A5F
+   Deep plum (gradient, button text)       : #5B2A86
+   Near-black (body text, headings)        : #16181D
+   Muted gray (secondary text, nav links)  : #6B7280
+   Light coral tint (hover backgrounds)    : #FFE9E9
+   Hairline border / card border           : #ECECEF
+   White (cards, button backgrounds)       : #FFFFFF
+   Log page: red, amber, blue accents      : #E4572E, #C98A00, #2563A8
+   ========================================================== */
+
+/* Paragraph styles for each page. Originally inline <font> tags in
+   index.html, log.html, and tips.html -- moved here as classes so
+   the styling lives in one place instead of repeated inline attributes. */
+
+/* Home page: three paragraphs, differentiated by font size */
+.home-p1 { font-size: 18px;}
+.home-p2 { font-size: 22px;}
+.home-p3 { font-size: 26px;}
+
+/* Log a Meal page: three paragraphs, differentiated by color */
+.log-p1 { color: #E4572E; }
+.log-p2 { color: #C98A00; }
+.log-p3 { color: #2563A8; }
+
+/* Healthy Tips page: three paragraphs, differentiated by font family, weight and style */
+.tips-p1 { font-family: 'Courier New', monospace; }
+.tips-p2 { font-weight: 700; }
+.tips-p3 { font-style: italic; }
+
+/* Site header bar on every page: logo on the left, nav links on the right. */
+.site-header {
+    display: flex; /* display: flex organizes the child elements in a row side by side, instead of stacking on top of each other */
+    justify-content: space-between; /* justify-content: controls spacing along the row -- space-between pushes the first and last child to opposite ends */
+    align-items: center; /* align-items: centers children vertically within the row */
+    padding: 18px 32px; /* padding: adds space inside the element, between its border and its content (18px top/bottom, 32px left/right) */
+    background: #FFFFFF; /* background: sets the background color */
+    border-bottom: 1px solid #ECECEF; /* border-bottom: draws a line only under the element, not around all four sides */
+}
+
+/* Removes the underline from all anchor tag links */
+a {
+    text-decoration: none;
+}
+
+/* Logo on the left side of the header bar: flex row with icon and text, centered vertically, with a small gap between them */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* gap: adds space between flex children, without needing margin on each one individually */
+    font-size: 19px;
+    font-weight: 700;
+    color : #16181D;
+}
+
+/* Navigation links on the right side of the header bar: flex row with a small gap between each link */
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Each navigation link: small margin on the left, padding inside the link, rounded corners, muted gray text color */
+.site-nav a {
+    margin-left: 8px; /* margin-left: adds space to the outside-left of the element, pushing it away from whatever's before it */
+    padding: 8px 14px;
+    border-radius: 8px; /* border-radius: rounds the corners; higher values = more rounded */
+    font-size: 14px;
+    font-weight: 600;
+    color: #6B7280;
+}
+
+/* Navigation link hover state: light coral background, coral text color */
+.site-nav a:hover {
+    background: #FFE9E9;
+    color: #FF5A5F;
+}
+
+/* Navigation link active state: coral background, white text color */
+.site-nav a.active {
+    background: #FF5A5F;
+    color: #FFFFFF;
+}
+
+/* Body text: Segoe UI font, near-black color */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #16181D;
+}
+
+/* Page container: max width, centered horizontally, padding on left/right and bottom */
+.page-container {
+    max-width: 900px; /* max-width: caps how wide the element can grow, even if its container is wider */
+    margin: 0 auto; /* margin: 0 auto centers a block horizontally (0 top/bottom, auto lets the browser split the leftover space evenly on left/right) */
+    padding: 0 24px 60px;
+}
+
+/* Hero section on the home page: padding, margin, rounded corners, gradient background */
+.hero {
+    padding: 56px 32px;
+    margin-bottom: 24px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #FF5A5F 0%, #5B2A86 100%);  /* linear-gradient: blends between two (or more) colors instead of one flat color; 135deg sets the angle it flows across */
+}
+
+/* Hero heading on the home page: Segoe UI font, bold weight, large size, white color */
+.hero h1 {
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    margin: 0 0 12px;
+    color: #FFFFFF;
+}
+
+/* Hero subheading on the home page: smaller size, near-white color, max width, line height, margin */
+.hero-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.9); /* rgba: like a color, but with a 4th value (0-1) controlling transparency -- 0.9 here is 90% opaque */
+    max-width: 560px;
+    line-height: 1.6; /* line-height: sets the vertical space a line of text takes up; higher values add breathing room between wrapped lines */
+    margin: 0 0 24px;
+}
+
+/* Hero image on the home page: full width, 3:2 aspect ratio, cover the box, rounded corners, soft shadow */
+.hero-image {
+    width: 100%;
+    aspect-ratio: 3 / 2; /* aspect-ratio: locks the width-to-height ratio (3:2 here), so the box keeps that shape at any size */
+    object-fit: cover; /* object-fit: controls how an image fills its box -- cover crops it to fill completely without stretching */
+    border-radius: 16px;
+    margin-bottom: 8px;
+    box-shadow: 0 8px 24px rgba(22, 24, 29, 0.14);
+}
+
+/* Content card: white box with border, rounded corners, padding, margin, soft shadow */
+.content-card {
+  background: #FFFFFF;
+  border: 1px solid #ECECEF;
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(22,24,29,0.05);
+}
+
+/* Table card: removes padding and hides overflow, so the table fills the card completely */
+.table-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Table styles: full width, collapsed borders, smaller font size */
+table {
+  width: 100%;
+  border-collapse: collapse; /* border-collapse: collapse merges adjacent table cell borders into single lines instead of doubled-up ones */
+  font-size: 14px;
+}
+
+/* Table header and cell styles: background color, text color, padding, alignment, font weight/size, border bottom */
+th {
+  background: #16181D;
+  color: #FFFFFF;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Table cell styles: padding, border bottom */
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ECECEF;
+}
+
+/* Table last row: removes the bottom border from the last row of the table */
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Profile photo on the About page: rounded corners, max width, centered, margin below, soft shadow */
+.profile-photo {
+  border-radius: 14px;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 24px rgba(22,24,29,0.14);
+}
+
+/* Social links on the About page: flex row with gap between icons */
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* Social link icons: fixed size, centered text, rounded circle, border, color */
+.social-links .fa {
+  width: 44px;
+  height: 44px;
+  line-height: 44px; /* line-height set equal to height: a common trick to vertically center a single line of text/icon inside a fixed-height box */
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1.5px solid #ECECEF;
+  color: #16181D;
+}
+
+/* Social link icon hover state: coral border, light coral background, coral text color */
+.social-links .fa:hover {
+  border-color: #FF5A5F;
+  background: #FFE9E9;
+  color: #FF5A5F;
+}

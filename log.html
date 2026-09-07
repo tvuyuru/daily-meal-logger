@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Daily Meal Logger - Log a Meal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Site header: logo on the left, nav links on the right -->
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      🍴 Daily Meal Logger
+    </a>
+    <nav class="site-nav">
+      <!-- Navigation: relative links to the other two pages -->
+      <a href="index.html">Home</a>
+      <a class="active" href="log.html">Log a Meal</a><br><br>
+      <a href="tips.html">Healthy Tips</a><br><br>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <div class="page-container">
+    <!-- Hero section: page heading and intro subtext on a gradient background -->
+    <div class="hero">
+      <h1>Log a meal</h1>
+      <p class="hero-sub">Record what you eat during the day, right in the table below.</p>
+    </div>
+
+    <!-- Image: photo representing the Log a Meal page -->
+    <img class="hero-image" src="log_image.jpg" alt="A notebook and a plate of breakfast">
+
+    <!-- Content card: three paragraphs of text, each styled differently -->
+    <div class="content-card">
+      <!-- Paragraph 1: what this page is for, styled with red font color -->
+      <p class="log-p1">
+        Add the date, meal, foods, and a short note to the table below, and it becomes your running log — no separate
+        spreadsheet needed.
+      </p>
+      <!-- Paragraph 2: why the entries are short, styled with orange font color -->
+      <p class="log-p2">
+        Short entries are the easiest to keep up with. A quick note right after a meal takes less than a minute, which
+        makes it far more likely you'll actually stick with logging every day instead of trying to remember everything
+        at night.
+      </p>
+      <!-- Paragraph 3: what comes after the table, styled with blue font color -->
+      <p class="log-p3">
+        Below the log is a quick calorie reference for meals that are hard to find accurate numbers for in most tracking
+        apps, especially Indian dishes like roti and dal. More meals get added here over time.
+      </p>
+    </div>
+
+    <!-- Table card: wraps the meal log table -->
+    <div class="content-card table-card">
+      <!-- Table: the meal log with date, meal, food items, and notes -->
+      <table>
+        <!-- Header row: <th> marks each column heading -->
+        <tr>
+          <th>Date</th>
+          <th>Meal</th>
+          <th>Food Items</th>
+          <th>Notes</th>
+        </tr>
+        <!-- Data rows: <td> holds the actual meal info for each entry -->
+        <tr>
+          <td>Aug 25</td>
+          <td>Breakfast</td>
+          <td>Oatmeal, banana, coffee</td>
+          <td>Filling</td>
+        </tr>
+        <tr>
+          <td>Aug 25</td>
+          <td>Lunch</td>
+          <td>Rice, dal, salad</td>
+          <td>Home-cooked</td>
+        </tr>
+        <tr>
+          <td>Aug 25</td>
+          <td>Dinner</td>
+          <td>Grilled veggies, roti</td>
+          <td>Light</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Card: wraps the calorie reference list -->
+    <div class="content-card">
+      <!-- Bulleted list: quick calorie reference -->
+      <ul>
+        <li>Roti (1 piece) &mdash; ~120 cal</li>
+        <li>Dal with rice (1 bowl) &mdash; ~300 cal</li>
+        <li>Idli (2 pieces) &mdash; ~150 cal</li>
+        <li>Oatmeal with banana &mdash; ~250 cal</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>
