@@ -3,7 +3,9 @@
 
 <head>
   <title>Daily Meal Logger - Healthy Tips</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome: icon font library, loaded from a CDN, used for the social media icons below -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -13,43 +15,89 @@
       🍴 Daily Meal Logger
     </a>
     <nav class="site-nav">
-      <!-- Navigation: relative links to the other two pages -->
+      <!-- Navigation: relative links to the other three pages -->
       <a href="index.html">Home</a>
-      <a href="log.html">Log a Meal</a><br><br>
-      <a class="active" href="tips.html">Healthy Tips</a><br><br>
+      <a href="log.html">Log a Meal</a>
+      <a class="active" href="tips.html">Healthy Tips</a>
       <a href="about.html">About</a>
     </nav>
   </header>
 
   <div class="page-container">
+
     <div class="hero">
       <!-- Hero section: page heading and intro subtext on a gradient background -->
       <h1>Healthy Tips</h1>
       <p class="hero-sub">A few small, practical habits worth trying &mdash; no fad diets, no gimmicks.</p>
     </div>
 
-    <!-- Image: photo representing the Healthy Tips page -->
-    <img class="hero-image" src="tips_image.jpg" alt="Fresh fruits and vegetables">
+    <!-- Two-column layout using floats: aside is floated left at a
+     fixed width, main content clears it via margin-left, and
+     ::after on this wrapper prevents the container from collapsing. -->
+    <div class="float-layout">
 
-    <!-- Content card: three paragraphs of text, each styled differently -->
-    <div class="content-card">
-      <!-- Paragraph 1: a tip about water and portion control, styled in monospace -->
-      <p class="tips-p1">
-        One simple habit worth building is drinking a glass of water before each meal. It helps you notice
-        when you're actually hungry versus eating out of habit, and it naturally keeps portions a little smaller.
-      </p>
-      <!-- Paragraph 2: a tip about balanced plates, styled bold -->
-      <p class="tips-p2">
-        Try to make at least half your plate vegetables or fruit at lunch and dinner. It's an easy rule to
-        remember, and it shifts your attention to what's actually on the plate.
-      </p>
-      <!-- Paragraph 3: a tip about breakfast, styled in italics -->
-      <p class="tips-p3">
-        Skipping breakfast tends to lead to snacking on whatever's around by mid-morning, so even something
-        small like oatmeal or fruit makes a real difference.
-      </p>
+      <aside class="float-layout-aside">
+        <div class="aside-card">
+          <h1 class="aside-h1">💧 Stay Hydrated</h1>
+          <p>Have water regularly throughout the day.</p>
+        </div>
+        <div class="aside-card">
+          <h1 class="aside-h1">🥗 Add some color</h1>
+          <p>Include fruits or vegetables with meals.</p>
+        </div>
+        <div class="aside-card">
+          <h1 class="aside-h1">📝 Track consistently</h1>
+          <p>A simple meal entry is better than trying to remember later.</p>
+        </div>
+
+        <div class="aside-card">
+          <h1 class="aside-h1">TRY TODAY</h1>
+          <p>Pick just one habit to focus on.</p>
+          <a class="active1" href="log.html">Log Today's Meal</a>
+        </div>
+      </aside>
+
+      <div class="float-layout-main">
+
+        <!-- Image: photo representing the Healthy Tips page -->
+        <img class="hero-image" src="images/tips_image.jpg" alt="Fresh fruits and vegetables">
+
+        <!-- Content card: three paragraphs of text, each styled differently -->
+        <div class="content-card">
+          <!-- Paragraph 1: a tip about water and portion control, styled in monospace -->
+          <p class="tips-p1">
+            One simple habit worth building is drinking a glass of water before each meal. It helps you notice
+            when you're actually hungry versus eating out of habit, and it naturally keeps portions a little smaller.
+          </p>
+          <!-- Paragraph 2: a tip about balanced plates, styled bold -->
+          <p class="tips-p2">
+            Try to make at least half your plate vegetables or fruit at lunch and dinner. It's an easy rule to
+            remember, and it shifts your attention to what's actually on the plate.
+          </p>
+          <!-- Paragraph 3: a tip about breakfast, styled in italics -->
+          <p class="tips-p3">
+            Skipping breakfast tends to lead to snacking on whatever's around by mid-morning, so even something
+            small like oatmeal or fruit makes a real difference.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
+
+  <footer class="page-footer">
+    <h1 class="footer-logo">
+      🍴 Daily Meal Logger
+    </h1>
+    <p>A simple way to track what you actually eat.</p>
+    <p>© 2026 Daily Meal Logger</p>
+
+    <!-- Social media links: icon buttons using Font Awesome. The urls are placeholders to be replaced later -->
+    <p class="social-links">
+      <a href="https://instagram.com" class="fa fa-instagram" title="Instagram"></a>
+      <a href="https://twitter.com" class="fa fa-twitter" title="Twitter / X"></a>
+      <a href="https://github.com" class="fa fa-github" title="GitHub"></a>
+    </p>
+  </footer>
 
 </body>
 

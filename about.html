@@ -3,7 +3,7 @@
 
 <head>
   <title>Daily Meal Logger - About</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- Font Awesome: icon font library, loaded from a CDN, used for the social media icons below -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -15,42 +15,75 @@
       🍴 Daily Meal Logger
     </a>
     <nav class="site-nav">
-      <!-- Navigation: relative links to the other two pages -->
+      <!-- Navigation: relative links to the other three pages -->
       <a href="index.html">Home</a>
-      <a href="log.html">Log a Meal</a><br><br>
-      <a href="tips.html">Healthy Tips</a><br><br>
+      <a href="log.html">Log a Meal</a>
+      <a href="tips.html">Healthy Tips</a>
       <a class="active" href="about.html">About</a>
     </nav>
   </header>
 
   <div class="page-container">
+
     <!-- Hero section: page heading on a gradient background -->
     <div class="hero">
       <h1>About This Site</h1>
     </div>
 
-    <!-- A photo of myself. -->
-    <img class="profile-photo" src="profile_photo.jpg" alt="Photo of me">
+    <!-- Same flexbox technique as log.html, but flex-direction:
+     row-reverse visually swaps the two columns without reordering
+     the HTML, placing the aside on the right. -->
+    <div class="flex-layout-reverse">
+      <aside class="flex-layout-reverse-aside">
+        <div class="aside-card">
+          <h1 class="aside-h1">ABOUT THE PROJECT</h1>
+          <h2 class="logo">🍴 Daily Meal Logger</h2>
+          <p>A simple meal-tracking website focused on making everyday food logging easier.</p>
+        </div>
+        <div class="aside-card">
+          <h1 class="aside-h1">WHY I BUILT IT</h1>
+          <ul class="about-list">
+            <li>Simple meal tracking</li>
+            <li>Better support for everyday foods</li>
+            <li>Especially interested in indian dishes</li>
+            <li>Built as a class project</li>
+            <li>Continuing to grow</li>
+          </ul>
+        </div>
+      </aside>
+      <div class="flex-layout-reverse-main">
+        <!-- A photo of myself. -->
+        <img class="profile-photo" src="images/profile_photo.jpg" alt="Photo of me">
 
-    <!-- Content card: wraps the three paragraphs explaining why I built this app -->
-    <div class="content-card">
-      <p>
-        I built Daily Meal Logger because I wanted a simple way to track what I actually eat, instead of
-        guessing at the end of the day. Most habit-tracking advice tells you to log your meals, but I never
-        found an easy way to do that without an app pushing a subscription or a specific diet plan on me.
-      </p>
-      <p>
-        The bigger motivation is that most meal-tracking apps just don't handle Indian food well. Things
-        like dal, roti, and idli either aren't in the database at all, or the portion sizes and calorie
-        estimates are way off. I got tired of fighting with an app just to log a normal meal, so I decided
-        to build something myself, shaped around the food I actually eat.
-      </p>
-      <p>
-        This started as a small class project, and I'm still learning HTML and CSS as I build it out. The
-        plan is to keep expanding the meal library, especially with Indian dishes, and to eventually open
-        it up so anyone can use it to track their own meals.
-      </p>
+        <!-- Content card: wraps the three paragraphs explaining why I built this app -->
+        <div class="content-card">
+          <p>
+            I built Daily Meal Logger because I wanted a simple way to track what I actually eat, instead of
+            guessing at the end of the day. Most habit-tracking advice tells you to log your meals, but I never
+            found an easy way to do that without an app pushing a subscription or a specific diet plan on me.
+          </p>
+          <p>
+            The bigger motivation is that most meal-tracking apps just don't handle Indian food well. Things
+            like dal, roti, and idli either aren't in the database at all, or the portion sizes and calorie
+            estimates are way off. I got tired of fighting with an app just to log a normal meal, so I decided
+            to build something myself, shaped around the food I actually eat.
+          </p>
+          <p>
+            This started as a small class project, and I'm still learning HTML and CSS as I build it out. The
+            plan is to keep expanding the meal library, especially with Indian dishes, and to eventually open
+            it up so anyone can use it to track their own meals.
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <footer class="page-footer">
+    <h1 class="footer-logo">
+      🍴 Daily Meal Logger
+    </h1>
+    <p>A simple way to track what you actually eat.</p>
+    <p>© 2026 Daily Meal Logger</p>
 
     <!-- Social media links: icon buttons using Font Awesome. The urls are placeholders to be replaced later -->
     <p class="social-links">
@@ -58,7 +91,7 @@
       <a href="https://twitter.com" class="fa fa-twitter" title="Twitter / X"></a>
       <a href="https://github.com" class="fa fa-github" title="GitHub"></a>
     </p>
-  </div>
+  </footer>
 
 </body>
 

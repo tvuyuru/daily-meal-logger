@@ -3,7 +3,9 @@
 
 <head>
   <title>Daily Meal Logger - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome: icon font library, loaded from a CDN, used for the social media icons below -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -15,44 +17,86 @@
     <nav class="site-nav">
       <!-- Navigation: relative links to the other three pages -->
       <a class="active" href="index.html">Home</a>
-      <a href="log.html">Log a Meal</a><br><br>
-      <a href="tips.html">Healthy Tips</a><br><br>
+      <a href="log.html">Log a Meal</a>
+      <a href="tips.html">Healthy Tips</a>
       <a href="about.html">About</a>
     </nav>
   </header>
 
   <div class="page-container">
+
     <!-- Hero section: page heading and intro subtext on a gradient background -->
     <div class="hero">
       <h1>Track meals your way</h1>
-      <p class="hero-sub"> Daily Meal Logger helps you keep track of what you eat, one entry at a time &mdash; including
+      <p class="hero-sub"> Daily Meal Logger helps you keep track of what you eat, one entry at a time &mdash;
+        including
         the meals most calorie apps get wrong.</p>
     </div>
 
-    <!-- Image: photo representing the Home page -->
-    <img class="hero-image" src="home_image.jpg" alt="A colorfull plate of food">
+    <!-- Two-column layout using CSS Grid: aside and content are placed
+     into named grid-template-areas ("aside image" / "aside content"),
+     so the aside spans both rows automatically. -->
+    <div class="grid-layout">
+      <aside class="grid-layout-aside">
+        <div class="aside-card">
+          <h1 class="aside-h1">QUICK START</h1>
+          <h2 class="aside-h2">🍽️ Log today's meal</h2>
+          <p>Record what you ate while it's fresh.</p>
+        </div>
+        <div class="aside-card">
+          <h1 class="aside-h1">BROWSE</h1>
+          <a class="aside-a" href="log.html">Log a Meal</a>
+          <a class="aside-a" href="tips.html">Healthy Tips</a>
+          <a class="aside-a" href="about.html">About This Site</a>
+        </div>
+        <div class="aside-card">
+          <h1 class="aside-h1">TODAY'S REMINDER</h1>
+          <p>Small entries are better than trying to remember everything at the end of the day.</p>
+          <a class="active1" href="log.html">+ Log a Meal</a>
+        </div>
+      </aside>
+      <!-- Image: photo representing the Home page -->
+      <img class="hero-image" src="images/home_image.jpg" alt="A colorfull plate of food">
+
+      <!-- Content card: three paragraphs of text, each styled differently -->
+      <div class="content-card">
+        <!-- Paragraph 1: intro, styled with a small font size -->
+        <p>
+          Welcome to my Daily Meal Logger. I started this site last week as a way to keep track of what I eat
+          each day. The idea is simple: write down my meals so I can start noticing patterns, like whether I'm
+          skipping
+          meals or eating the same few things too often.
+        </p>
+        <!-- Paragraph 2: site overview, styled with a medium font size -->
+        <p>
+          On this site you'll find three other pages you can explore: Log a Meal, where you record what you ate;
+          Healthy Tips, with small habits worth trying; and About, where you can read the story behind why this
+          app exists. Feel free to click through and see how it's set up so far.
+        </p>
+        <!-- Paragraph 3: personal note, styled with a large font size -->
+        <p>
+          This is an early version of the app, built as a class project and still growing. Want to know the story
+          behind why I built it in the first place? Check out the About page.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <!-- Content card: three paragraphs of text, each styled differently -->
-  <div class="content-card">
-    <!-- Paragraph 1: intro, styled with a small font size -->
-    <p class="home-p1">
-      Welcome to my Daily Meal Logger. I started this site last week as a way to keep track of what I eat
-      each day. The idea is simple: write down my meals so I can start noticing patterns, like whether I'm skipping
-      meals or eating the same few things too often.
+  <footer class="page-footer">
+    <h1 class="footer-logo">
+      🍴 Daily Meal Logger
+    </h1>
+    <p>A simple way to track what you actually eat.</p>
+    <p>© 2026 Daily Meal Logger</p>
+
+    <!-- Social media links: icon buttons using Font Awesome. The urls are placeholders to be replaced later -->
+    <p class="social-links">
+      <a href="https://instagram.com" class="fa fa-instagram" title="Instagram"></a>
+      <a href="https://twitter.com" class="fa fa-twitter" title="Twitter / X"></a>
+      <a href="https://github.com" class="fa fa-github" title="GitHub"></a>
     </p>
-    <!-- Paragraph 2: site overview, styled with a medium font size -->
-    <p class="home-p2">
-      On this site you'll find three other pages you can explore: Log a Meal, where you record what you ate;
-      Healthy Tips, with small habits worth trying; and About, where you can read the story behind why this
-      app exists. Feel free to click through and see how it's set up so far.
-    </p>
-    <!-- Paragraph 3: personal note, styled with a large font size -->
-    <p class="home-p3">
-      This is an early version of the app, built as a class project and still growing. Want to know the story
-      behind why I built it in the first place? Check out the About page.
-    </p>
-  </div>
+  </footer>
+
 </body>
 
 </html>
