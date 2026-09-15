@@ -223,6 +223,7 @@ tr:last-child td {
   color: #FF5A5F;
 }
 
+/* Site footer: centered layout, white background, thin top border, same on every page */
 .page-footer {
   text-align: center;
   /* to align center */
@@ -233,6 +234,7 @@ tr:last-child td {
   /* border-top: draws a line only above the element, not around all four sides */
 }
 
+/* Footer's logo line: centers the icon and text together */
 .footer-logo {
   align-items: center;
   gap: 8px;
@@ -242,28 +244,35 @@ tr:last-child td {
   color: #16181D;
 }
 
+/* Home page layout: CSS Grid using named areas so the aside spans both rows on the right */
 .grid-layout {
   display: grid;
   grid-template-columns: minmax(220px, 260px) 1fr;
+  /* defines the grid's columns and their widths here, a first column that's atleast 220px but can grow upto 260px, then a second column ("1fr") that takes up one fraction of whatever space is left */
   grid-template-areas:
+    /* names regions of the grid using a text diagram */
     "aside image"
     "aside content";
   gap: 20px;
   padding: 20px;
 }
 
+/* Assigns the aside to the "aside" named grid area defined above */
 .grid-layout-aside {
   grid-area: aside;
 }
 
+/* Assigns the hero image to the "image" named grid area, only on the Home page's grid layout */
 .hero-image {
   grid-area: image;
 }
 
+/* Assigns the content card to the "content" named grid area, only on the Home page's grid layout */
 .content-card {
   grid-area: content;
 }
 
+/* Shared white-card style used for every sidebar card across all four pages */
 .aside-card {
   background: #FFFFFF;
   border: 1px solid #ECECEF;
@@ -274,17 +283,20 @@ tr:last-child td {
   box-shadow: 0 2px 12px rgba(22, 24, 29, 0.05);
 }
 
+/* Small uppercase heading style used inside each aside-card */
 .aside-h1 {
   font-size: 18px;
   color: #5B2A86;
 }
 
+/* Plain text link style for the Browse card -- real <a> tags styled to not look like default blue links */
 .aside-a {
   display: block;
   text-decoration: none;
   color: #16181D;
 }
 
+/* Solid coral button style, used for the sidebar's call-to-action links */
 .aside-card a.active1 {
   background: #FF5A5F;
   color: #FFFFFF;
@@ -292,6 +304,7 @@ tr:last-child td {
   text-align: center;
 }
 
+/* Base link style shared by all sidebar links before the more specific rules above override parts of it */
 .aside-card a {
   align-items: center;
   padding: 8px 14px;
@@ -302,6 +315,7 @@ tr:last-child td {
   color: #6B7280;
 }
 
+/* Log a Meal page layout: Flexbox row with a fixed-width aside and a flexible main column */
 .flex-layout {
   display: flex;
   flex-direction: row;
@@ -310,6 +324,7 @@ tr:last-child td {
   /* prevents the sidebar from stretching to match the taller main column */
 }
 
+/* Main content column: stacks its own children (image, text, table) vertically */
 .main-column {
   display: flex;
   flex-direction: column;
@@ -320,6 +335,7 @@ tr:last-child td {
   /* prevents flex item from overflowing when content (like the table) is wide */
 }
 
+/* Sidebar column: fixed width, stacks its cards vertically */
 .flex-layout-aside {
   display: flex;
   flex-direction: column;
@@ -328,12 +344,14 @@ tr:last-child td {
   /* don't grow, don't shrink, stay exactly 260px wide */
 }
 
+/* Clearfix: floated children (the aside and main) don't add to their parent's height on their own, so without this the container would collapse to zero height and the footer below could overlap them */
 .float-layout::after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* Healthy Tips page layout: Float-based sidebar, pulled to the left */
 .float-layout-aside {
   float: left;
   width: 300px;
@@ -346,6 +364,7 @@ tr:last-child td {
   /* 300px aside + 24px gap */
 }
 
+/* Custom circular checkbox style for the Meal Checklist, replacing the browser's default checkbox shape */
 .round-check {
   appearance: none;
   -webkit-appearance: none;
@@ -364,6 +383,7 @@ tr:last-child td {
   border-color: #16181D;
 }
 
+/* Row style for each item in the Quick Calorie Guide list */
 .calorie-p {
   padding: 2px 2px;
   /* padding: adds space inside the element, between its border and its content (18px top/bottom, 32px left/right) */
@@ -373,6 +393,7 @@ tr:last-child td {
   /* border-bottom: draws a line only under the element, not around all four sides */
 }
 
+/* About page layout: same Flexbox technique as Log a Meal, but row-reverse flips which side the aside appears on */
 .flex-layout-reverse {
   display: flex;
   flex-direction: row-reverse;
@@ -381,6 +402,7 @@ tr:last-child td {
   align-items: flex-start;
 }
 
+/* Main content column on the About page */
 .flex-layout-reverse-main {
   display: flex;
   flex-direction: column;
@@ -389,6 +411,7 @@ tr:last-child td {
   min-width: 0;
 }
 
+/* Sidebar column on the About page */
 .flex-layout-reverse-aside {
   display: flex;
   flex-direction: column;
@@ -397,6 +420,7 @@ tr:last-child td {
   /* don't grow, don't shrink, stay exactly 260px wide */
 }
 
+/* Bullet list style for the "Why I Built It" card on the About page */
 .about-list {
   padding: 2px 20px;
   font-size: 18px;
